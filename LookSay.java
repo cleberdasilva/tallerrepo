@@ -29,9 +29,12 @@ class LookSay {
             int target = 911; //type to exit the loop
             int n = 0;
             Scanner scanner = new Scanner(System.in);
-            while (n != target) {
+            while (true) {
                 System.out.print("Enter n: ");
                 n = scanner.nextInt();
+                if (n == target) {
+                    break;
+                }
                 System.out.println(countAndSay(n));
             }
             scanner.close();
